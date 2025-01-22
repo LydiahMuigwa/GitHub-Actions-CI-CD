@@ -38,9 +38,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: mr-smithers-excellent/docker-build-push@v4
         with:
-          image: lykah1/github_actions:1.0 # Your private DockerHub repo/image name
+          image: lykah1/github_actions
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          dockerfile: ./Dockerfile # Explicit path to Dockerfile (adjust if necessary)
-          tags: 1.0 # Static tag for the Docker image
